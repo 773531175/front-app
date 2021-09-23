@@ -1,0 +1,123 @@
+a,abbr,acronym,address,applet,big,blockquote,body,button,caption,cite,code,dd,del,
+dfn,div,dl,dt,em,fieldset,font,form,h1,h2,h3,h4,h5,h6,html,iframe,img,input,ins,kbd,label,legend,
+li,object,ol,p,pre,q,s,samp,small,span,strike,strong,sub,sup,table,tbody,td,textarea,tfoot,th,thead,tr,tt,ul,var {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%
+}
+
+ul,li{ 
+    list-style:none
+}
+
+img {
+    border: 0
+}
+
+table {
+    border-collapse: collapse;border-spacing: 0;
+}
+
+ol,ul {
+    list-style: none
+}
+
+a {
+    text-decoration: none !important;
+}
+
+::selection {
+    background: #409EFF;color: #FFF
+}
+
+body,html {
+    width: 100%;height: 100%;font-size: 14px;
+    font-family: 'PingFang-SC',arial, sans-serif;
+}
+
+textarea {
+    resize: none
+}
+
+.clear {
+    clear: both
+}
+
+.no_connect_tip { 
+    color: #0f8cd7; text-decoration: underline; padding: 0 5px; outline: 0;
+}
+.no_connect_tip:hover {
+    color: #f60; text-decoration: none;
+}
+
+body,#app{
+    height: 100%;
+}
+.clearfix::after {
+    content: " ";
+　　display: block;
+　　clear: both;
+　　height: 0;
+}
+.clearfix {
+    zoom: 1;
+}
+
+/**** border 1px 处理 begin****/
+
+.app_border, .app_border_t, .app_border_r, .app_border_b, .app_border_l {
+    border-image: none;
+    border: solid 0 #e4e4e4;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+    .app_border, .app_border_t, .app_border_r, .app_border_b, .app_border_l {
+        border-width: 0;
+        border-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAH0lEQVQIW2O8c+fOfwYsgBEkoaKiwogsBxKjtgQ2ywFMJyV5rQbuRgAAAABJRU5ErkJggg==) 2 2 stretch;
+    }
+}
+
+.app_border {
+    border-width: 1px;
+}
+
+.app_border_t {
+    border-top-width: 1px;
+}
+
+.app_border_r {
+    border-right-width: 1px;
+}
+
+.app_border_b {
+    border-bottom-width: 1px;
+}
+
+.app_border_l {
+    border-left-width: 1px;
+}
+
+/**** border 1px 处理 end****/
+
+
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: #f5f5f5;
+}
+*::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #f5f5f5;
+}
+
+/*定义滑块 内阴影+圆角*/
+*::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #999;
+}

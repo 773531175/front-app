@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <!-- UC强制全屏 -->
+        <meta name="full-screen" content="yes" />
+        <!-- QQ强制全屏 -->
+        <meta name="x5-fullscreen" content="true" />
+        <!-- UC应用模式 -->
+        <meta name="browsermode" content="application" />
+        <!-- QQ应用模式 -->
+        <meta name="x5-page-mode" content="app" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta content="telephone=no" name="format-detection" />
+        <meta name="full-screen" content="yes">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <% if(process.env.NODE_ENV == 'production'){ %>
+            <% for (var css in htmlWebpackPlugin.files.css) { %>
+                <link href="<%=htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
+            <% } %>
+        <% } %>
+        <!--
+        移动端rem适配
+        <script type="text/javascript" src="//file.40017.cn/ddjapp/tcuniversity/src/college/common/js/flexible.debug.min.js"></script>
+        <script charset="utf-8" src="//file.40017.cn/ddjapp/tcuniversity/src/college/common/js/flexible_css.debug.min.js"></script>
+        -->
+    </head>
+
+    <body>
+        <div id="app">
+        </div>
+        <% if(process.env.NODE_ENV == 'production'){ %>
+            <% htmlWebpackPlugin.files.js.forEach(function(item){ %>
+                <script type="text/javascript" src="<%= item %>"></script>
+            <% }) %>
+        <% } %>
+    </body>
+
+</html>
