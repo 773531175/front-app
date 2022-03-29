@@ -1,5 +1,5 @@
 <template>
-  <div>index</div>
+  <div>index test 一下</div>
 </template>
 
 <script>
